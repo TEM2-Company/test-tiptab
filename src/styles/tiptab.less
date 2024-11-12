@@ -1,0 +1,118 @@
+.ProseMirror {
+  padding: 10px 10px 10px 10px;
+  min-height: 200px;
+  border: 1px solid #ced4da;
+  border-radius: 0 0 8px 8px;
+  > * + * {
+    margin-top: 0.75em;
+  }
+  p.is-editor-empty:first-child::before {
+    content: attr(data-placeholder);
+    float: left;
+    color: #ced4da;
+    pointer-events: none;
+    height: 0;
+  }
+}
+
+.tippy-content {
+  background: white;
+  border-radius: 5px;
+  padding: 3px;
+  -moz-box-shadow: 0 0 3px #ccc;
+  -webkit-box-shadow: 0 0 3px #ccc;
+  box-shadow: 0 0 3px #ccc;
+}
+.editor-frame {
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 3px #ccc;
+  -webkit-box-shadow: 0 0 3px #ccc;
+  box-shadow: 0 0 3px #ccc;
+  margin-top: 8px;
+}
+
+.editor-block {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  background-color: #f9f9f9;
+  border-radius: 5px 5px 0 0;
+}
+
+.header-tap {
+  height: 8px;
+  border-radius: 5px 5px 0px 0px;
+  background: black;
+}
+
+button.ant-btn.ant-btn-icon-only.t-btn.editor-icon {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  width: 36px;
+  height: 36px;
+  margin: 0 2px;
+}
+
+button.t-btn {
+  border: none;
+  cursor: pointer;
+}
+.t-btn:hover,
+.t-btn-buble:hover {
+  background: #e6e6e6 !important;
+  color: black !important;
+  //   color: white !important;
+}
+
+.ProseMirror:focus-visible {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+.t-color-btn.ant-btn {
+  padding: 1px !important;
+  border: 1px solid #d9d9da !important;
+  color: black !important;
+  margin-left: 3px;
+  border-radius: unset !important;
+  height: auto !important;
+}
+
+.left.is-active,
+.right.is-active,
+.center.is-active,
+.bold.is-active,
+.italic.is-active,
+.blockquote.is-active,
+.underline.is-active,
+.strike.is-active,
+.clearNodes.is-active,
+.link.is-active,
+.h1.is-active,
+.h2.is-active,
+.h3.is-active,
+.h4.is-active,
+.h5.is-active,
+.h6.is-active,
+.bullet.is-active,
+.orderlist.is-active,
+.blockquote.is-active,
+.horizon.is-active,
+.undo.is-active,
+.color.is-active,
+.redo.is-active,
+.bulletList.is-active {
+  background: #d9d9d9 !important;
+}
+
+.btn-change-color {
+  height: 36px;
+  width: 36px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-direction: column;
+  background-color: transparent;
+}

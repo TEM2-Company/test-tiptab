@@ -1,0 +1,7 @@
+.toolbar {
+  display: flex;
+  gap: 2px;
+  padding: 8px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}

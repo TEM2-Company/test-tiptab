@@ -7,19 +7,13 @@ dependencies:
   '@tiptap/core':
     specifier: ^2.9.1
     version: 2.9.1(@tiptap/pm@2.9.1)
-  '@tiptap/extension-bold':
-    specifier: ^2.9.1
-    version: 2.9.1(@tiptap/core@2.9.1)
   '@tiptap/extension-color':
     specifier: ^2.9.1
     version: 2.9.1(@tiptap/core@2.9.1)(@tiptap/extension-text-style@2.9.1)
-  '@tiptap/extension-heading':
+  '@tiptap/extension-highlight':
     specifier: ^2.9.1
     version: 2.9.1(@tiptap/core@2.9.1)
-  '@tiptap/extension-italic':
-    specifier: ^2.9.1
-    version: 2.9.1(@tiptap/core@2.9.1)
-  '@tiptap/extension-strike':
+  '@tiptap/extension-text-align':
     specifier: ^2.9.1
     version: 2.9.1(@tiptap/core@2.9.1)
   '@tiptap/extension-text-style':
@@ -1017,6 +1011,14 @@ packages:
       '@tiptap/core': 2.9.1(@tiptap/pm@2.9.1)
     dev: false
 
+  /@tiptap/extension-highlight@2.9.1(@tiptap/core@2.9.1):
+    resolution: {integrity: sha512-ro3bARRgxb4v8w6fPVfG1kO2UWtLgKI5ESfsQ9CqiZuRkZdRKhM5ZpXPIky28Pn7CxhDUSXBXS/MhvP0VuhMJQ==}
+    peerDependencies:
+      '@tiptap/core': ^2.7.0
+    dependencies:
+      '@tiptap/core': 2.9.1(@tiptap/pm@2.9.1)
+    dev: false
+
   /@tiptap/extension-history@2.9.1(@tiptap/core@2.9.1)(@tiptap/pm@2.9.1):
     resolution: {integrity: sha512-wp9qR1NM+LpvyLZFmdNaAkDq0d4jDJ7z7Fz7icFQPu31NVxfQYO3IXNmvJDCNu8hFAbImpA5aG8MBuwzRo0H9w==}
     peerDependencies:
@@ -1071,6 +1073,14 @@ packages:
 
   /@tiptap/extension-strike@2.9.1(@tiptap/core@2.9.1):
     resolution: {integrity: sha512-V5aEXdML+YojlPhastcu7w4biDPwmzy/fWq0T2qjfu5Te/THcqDmGYVBKESBm5x6nBy5OLkanw2O+KHu2quDdg==}
+    peerDependencies:
+      '@tiptap/core': ^2.7.0
+    dependencies:
+      '@tiptap/core': 2.9.1(@tiptap/pm@2.9.1)
+    dev: false
+
+  /@tiptap/extension-text-align@2.9.1(@tiptap/core@2.9.1):
+    resolution: {integrity: sha512-oUp0XnwJpAImcOVV68vsY2CpkHpRZ3gzWfIRTuy+aYitQim3xDKis/qfWQUWZsANp9/TZ0VyjtkZxNMwOfcu1g==}
     peerDependencies:
       '@tiptap/core': ^2.7.0
     dependencies:

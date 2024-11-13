@@ -10,6 +10,9 @@ import {
   UnorderedListOutlined,
 } from "@ant-design/icons";
 import TextColor from "./text-color";
+import BucketColor from "./bucket-color";
+import formatTextIcon from "../../assets/icons/format-text.svg";
+import SelectSize from "./select-size";
 const MenuBar = ({ editor }: { editor: Editor | null }) => {
   return (
     <div className="toolbar">
@@ -82,6 +85,19 @@ const MenuBar = ({ editor }: { editor: Editor | null }) => {
       <TextColor
         value={editor?.getAttributes("textStyle").color}
         onChange={(event) => editor?.chain().focus().setColor(event).run()}
+      />
+      <SelectSize />
+      <BucketColor
+        value={editor?.getAttributes("highlight").color}
+        onChange={(event) =>
+          editor?.chain().focus().setHighlight({ color: event }).run()
+        }
+      />
+
+      <Button
+        icon={<img src={formatTextIcon} width={16} />}
+        onClick={() => editor?.chain().focus().unsetAllMarks().run()}
+        className={"t-btn editor-icon"}
       />
     </div>
   );

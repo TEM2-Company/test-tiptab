@@ -1,11 +1,13 @@
 import { CaretDownOutlined } from "@ant-design/icons";
 import { Button, ColorPicker } from "antd";
 import { useMemo } from "react";
+import bucketIcon from "../../assets/icons/bucket.svg";
 interface IProps {
   value?: string;
   onChange?: (value: string) => void;
 }
-const TextColor = ({ onChange, value = "#000000" }: IProps) => {
+
+const BucketColor = ({ onChange, value = "#fff200" }: IProps) => {
   const bgColor = useMemo<string>(() => value, [value]);
 
   return (
@@ -19,12 +21,13 @@ const TextColor = ({ onChange, value = "#000000" }: IProps) => {
         icon={
           <>
             <div className="btn-change-color">
-              <span>A</span>
+              <img src={bucketIcon} height={12} />
               <div
                 style={{
                   width: 12,
                   height: 2,
                   background: bgColor,
+                  marginTop: 2,
                 }}
               />
             </div>
@@ -36,4 +39,4 @@ const TextColor = ({ onChange, value = "#000000" }: IProps) => {
   );
 };
 
-export default TextColor;
+export default BucketColor;
